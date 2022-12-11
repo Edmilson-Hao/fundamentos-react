@@ -1,13 +1,12 @@
 import React, {cloneElement} from 'react'
 
-import FamiliaMembro from './FamiliaMembro'
-
 //Passando props para componente filho, pode ser usar destructuring {...props}
 export default props => {
-    console.log(typeof props.children)
     return (
         <div>
             {
+                //clonElement -> metodo do React (React.cloneElement)
+                    //Recebe 02 argumentos (elemento, props)
                 props.children.map((child, i) => {
                     return cloneElement(child, {...props, key: i})
                 })

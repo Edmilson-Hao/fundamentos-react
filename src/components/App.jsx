@@ -1,5 +1,6 @@
 import React            from 'react'
 
+import ListaAlunos from './repeticao/ListaAlunos'
 import Familia          from './basicos/Familia'
 import FamiliaMembro          from './basicos/FamiliaMembro'
 import Card             from './layout/Card'
@@ -20,6 +21,10 @@ export default _ =>
         <h1>Fundamentos React</h1>
 
         <div className='Cards'>
+
+            <Card titulo='#7 - Repetição' color='#FF4C65'>
+                <ListaAlunos></ListaAlunos>
+            </Card>
 
             <Card titulo='#6 - Componente com Filhos' color='#00C8F8'>
                 <Familia sobrenome='Ferreira'>
@@ -50,20 +55,3 @@ export default _ =>
             </Card>
         </div>
     </div>
-
-/*
-export default _ => {
-    return (
-        <div id='app'>
-            <h1>Fundamentos React</h1>
-            <Fragmento></Fragmento>
-            <ComParametro
-                titulo='Situação do Aluno'
-                aluno='Pedro Silva'
-                nota={ 9.3 }
-            />
-            <Primeiro></Primeiro>
-        </div>
-    )
-}
-*/
