@@ -19,7 +19,7 @@ export default props => {
             <table>
                 <thead>
                     <tr>
-                        <th colspan="3">Lista de Produtos</th>
+                        <th colSpan="3">Lista de Produtos</th>
                     </tr>
 
                     <tr>
