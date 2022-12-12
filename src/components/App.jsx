@@ -1,8 +1,9 @@
 import React            from 'react'
 
-import ListaAlunos from './repeticao/ListaAlunos'
+import TabelaProdutos   from './repeticao/TabelaProdutos'
+import ListaAlunos      from './repeticao/ListaAlunos'
 import Familia          from './basicos/Familia'
-import FamiliaMembro          from './basicos/FamiliaMembro'
+import FamiliaMembro    from './basicos/FamiliaMembro'
 import Card             from './layout/Card'
 import Aleatorio        from './basicos/Aleatorio'
 import Fragmento        from './basicos/Fragmento'
@@ -22,11 +23,15 @@ export default _ =>
 
         <div className='Cards'>
 
-            <Card titulo='#7 - Repetição' color='#FF4C65'>
+            <Card titulo='#7 - Repetição - Tabela Produtos' color ='#3A9AD9'>
+                <TabelaProdutos />
+            </Card>
+
+            <Card titulo='#6 - Repetição' color='#FF4C65'>
                 <ListaAlunos></ListaAlunos>
             </Card>
 
-            <Card titulo='#6 - Componente com Filhos' color='#00C8F8'>
+            <Card titulo='#5 - Componente com Filhos' color='#00C8F8'>
                 <Familia sobrenome='Ferreira'>
                     <FamiliaMembro nome='Pedro' />
                     <FamiliaMembro nome='Ana' />
@@ -34,11 +39,11 @@ export default _ =>
                 </Familia>
             </Card>
 
-            <Card titulo='#5 - Desafio Aleatório' color='#FA6900'>
+            <Card titulo='#4 - Desafio Aleatório' color='#FA6900'>
                 <Aleatorio min={1} max={60} />
             </Card>
 
-            <Card titulo='#4 - Fragmento' color='#E94C6F'>
+            <Card titulo='#3 - Fragmento' color='#E94C6F'>
                 <Fragmento/>
             </Card>
             

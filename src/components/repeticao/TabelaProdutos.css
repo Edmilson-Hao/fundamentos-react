@@ -1,0 +1,28 @@
+#tableWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+th {
+    background-color: #283CAE;
+    border: 1px solid rgba(0, 0, 0, .5);
+    color: white;
+}
+
+td {
+    border: 1px dashed rgba(0, 0, 0, .5)
+}
+
+.Par {
+    background-color: #ddd;
+}
+
+.Impar {
+    background-color: #ccc;
+}
