@@ -24,10 +24,10 @@ export default props => {
         return numbers
     }
 
-    const generateList = (qtde, array) =>{
-        generateSequence(qtde)
+    const generateList = () =>{
+        const numbersGenerated = generateSequence(qtde)
 
-        const arrayList =  array.map((item, index) => {
+        const newArray =  numbersGenerated.map((item, index) => {
             <li>
                 {index+1}°: {item}
             </li>
@@ -40,7 +40,7 @@ export default props => {
 
     return (
         <div>
-            {  }
+            { generateList }
         </div>
     )
 }
