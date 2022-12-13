@@ -1,5 +1,6 @@
 import React            from 'react'
 
+import Mega             from './mega/Mega'
 import Contador         from './contador/Contador'
 import Input            from './formulario/Input'
 import IndiretaPai      from './comunicacao/IndiretaPai'
@@ -28,6 +29,10 @@ export default _ =>
         <h1>Fundamentos React</h1>
 
         <div className='Cards'>
+
+            <Card titulo='13# - Desafio Mega Sena' color='#44A299'>
+                <Mega qtde={ 6 } min={ 1 } max={ 60 } />
+            </Card>
 
             <Card titulo='#12 - Contador' color='#424242'>
                 <Contador numeroInicial={10}></Contador>
