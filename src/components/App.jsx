@@ -30,7 +30,7 @@ export default _ =>
 
         <div className='Cards'>
 
-            <Card titulo='13# - Desafio Mega Sena' color='#44A299'>
+            <Card titulo='13# - Desafio Mega Sena' color='#B9006E'>
                 <Mega qtde={ 6 } min={ 1 } max={ 60 } />
             </Card>
 

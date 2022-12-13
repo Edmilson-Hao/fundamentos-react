@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import './Mega.css'
 
 export default props => {
+
+    const {min, max} = props
 
     function gerarNumeroNaoContido(min,max,array){
         const aleatorio = parseInt(Math.random()*(max-min))+min
@@ -22,7 +24,22 @@ export default props => {
         return numeros
     }
 
+    const [qtde, setQtde] = useState(props.qtde || 6)
+    const numerosIniciais = gerarNumeros(qtde)
+    const [numeros, setNumeros] = useState(numerosIniciais)
    
     return (
+        <div className='Mega'>
+            <h2>Mega</h2>
+            <h3>{numeros.join(' ')}</h3>
+            <div>
+                <label>Qtde Números</label>
+                <input type="number" value={ qtde } onChange={e => {
+                    setQtde(+e.target.value)
+                    setNumeros(gerarNumeros(qtde))
+                }} />
+            </div>
+            <button onClick={_ => { setNumeros(gerarNumeros(qtde)) }}>Gerar Números</button>
+        </div>
     )
 }
