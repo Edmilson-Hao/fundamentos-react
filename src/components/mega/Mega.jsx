@@ -7,7 +7,7 @@ export default props => {
     const { qtde, min, max } = props
 
     let arrayMega = []
-
+    
     const generateNumber = (min, max, array) => {
         const randomNumber = parseInt((Math.random() * (max+1-min))+min)
         return arrayMega.includes(randomNumber) ? generateNumber(min, max, array) : randomNumber
@@ -24,20 +24,11 @@ export default props => {
         return numbers
     }
 
-    const generateList = () =>{
-        const numbersGenerated = generateSequence(qtde)
-
-        const newArray =  numbersGenerated.map((item, index) => {
-            <li>
-                {index+1}°: {item}
-            </li>
-        })
-
-        return arrayList
-    }
-
-    arrayMega.sort()
-
+    const generateList = generateSequence(qtde).map((item, index) => {
+        return <li>{ index+1 }°: { item } </li>
+    })
+    
+    
     return (
         <div>
             { generateList }
