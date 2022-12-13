@@ -15,7 +15,7 @@ export default props => {
             <h2>{ valor }</h2>
             <div style={ {
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
             } }>
                 <input value={ valor } onChange={ quandoMudar }/>
                 <input value={ valor } readOnly />
